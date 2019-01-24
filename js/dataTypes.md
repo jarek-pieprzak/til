@@ -31,11 +31,11 @@ in the fixed amount of memory available for variable, the in-memory value
 of a reference type is the reference itself (a memory address).
 
 -------------------
-####Boolean type
+#### Boolean type
 Represents a logical entity and can have two values: `true / false` 
 
 ---------------
-####null type
+#### null type
 ... is just null. Represents the intentional absence of any object value. 
 `null` is not an identifier for a property of the global object, like undefined can be. 
 Instead, `null` expresses a lack of identification, indicating that a variable points 
@@ -43,16 +43,16 @@ to no object. In APIs, null is often retrieved in a place where an object can be
  but no object is relevant.
 
 --------------
-####undefined type
+#### undefined type
 A variable that has not been assigned a value has the value undefined.
 
 -----------------------
-####Number type
+#### Number type
 In ECMAScript, is only one number type (double-precision 64-bit binary format IEEE 754 value).
 It means that numbers are between -(2^53 - 1 and (2^53 - 1). There is no specific type for integers.
 
 --------
-####String type
+#### String type
 JavaScript's String type is used to represent textual data. It is a set of 
 "elements" of 16-bit unsigned integer values. 
 Each element in the String occupies a position in the String. 
@@ -65,12 +65,12 @@ This means that once a string is created, it is not possible to modify it.
 However, it is still possible to create another string based on an operation on the original string.
 
 --------------
-####Symbol (new in ES6)
+#### Symbol (new in ES6)
 A Symbol is a unique and immutable primitive value and may be used as the key of an Object property.
 More on MDN.
 
 --------------
-####Object
+#### Object
 In computer science, an object is a value in memory which is possibly referenced by an identifier.
 
 In JavaScript, objects can be seen as a collection of properties. With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
