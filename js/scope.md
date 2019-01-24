@@ -50,7 +50,7 @@ console.log(inner) // on console.log call we get an error, because inner is not 
 When you declare a variable with `const` or `let` within `{ }`, you can acces these variables only within `{ }`.
 
 ```js
-  {
+{
   const hello = 'Hello CSS-Tricks Reader!'
   console.log(hello) // 'Hello CSS-Tricks Reader!'
 }
