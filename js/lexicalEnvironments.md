@@ -16,4 +16,5 @@ Zewnętrzny Lexical Environment może mieć swój własny outer LexicalEnvironme
 
 Global environment to Lexical Environment nie mający zewnętrznego środowiska leksykalnego, co znaczy że jego referencja do środowiska zewnętrznego jest równa null.
 
-Environment Record środowiska globalnego może być 
+Environment Record środowiska globalnego może być sprepopulowany powiązaniami identyfikatorów (identifier bindings) oraz zawierać powiązany obiekt globalny (global object) którego propertisy mogą zapewniać niektóre powiązania identyfikatorów global environment.
+Gdy wykonywany jest kod ECMAScript, dodatkowe propertisy mogą być dodawane do obiektu globalnego, a propertisy początkowe mogą być modyfikowane.
