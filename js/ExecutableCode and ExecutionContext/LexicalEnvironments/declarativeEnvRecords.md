@@ -1,4 +1,4 @@
-## Declarative Env Record 
+## Declarative Env Records
 
 Każdy Declarative Env Record jest powiązany z ECMAScrit program scope, zawierającym:
 - var, const, let
