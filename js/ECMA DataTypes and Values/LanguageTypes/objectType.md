@@ -20,3 +20,9 @@ Key values muszą być unikalne. NIe mogą się powtarzać.
 
 Wszystkie obiekty są logicznymi kolekcjami właściwości, ale istnieje wiele form obiektów, które różnią się semantyką dostępu i manipulowania ich właściwościami.
 Obiekty zwykłe są najczęstszą formą obiektów i mają domyślną semantykę obiektów.
+
+```js
+  var identifier = {
+        key: value              
+      }
+```
