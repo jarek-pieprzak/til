@@ -14,4 +14,4 @@ która dodaje lub usuwa propertisy.
 Wszelkie powiązanie które zostały stworzone jako wynik efektu ubocznego są uważane za wiązania zmienne (mutable binding) 
 nawet jeśli strybut Writtable konkretnego property ma wartość `false`. 
 
-**Wiązania zmienne (Immutable bindings) nie istnieją dla** `Object env records`.
+**Wiązania niezmienne (Immutable bindings) nie istnieją dla** `Object env records`.
