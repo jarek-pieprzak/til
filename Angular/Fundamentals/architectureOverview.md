@@ -78,3 +78,21 @@ Dependency Ijection (DI) pozwala na utrzymanie klas komponentów w sposób estet
 Nie pobierają danych z serwera, nie zatwierdzają danych wprowadzonych przez użytkownika ani nie logują się bezpośrednio do konsoli; delegują takie zadania do serwisów.
 
 `Później..`
+
+### Routing 
+
+Angularowy moduł `Router` oferuje usługę, która pozwala zdefiniować ścieżkę nawigacji między różnymi stanami aplikacji i wyświetlić hierarchie w aplikacji. Jest wzorowany na znanych konwencjach nawigacji w przeglądarce:
+- wprowadź url w pasku, aby przejść do konkretnej strony
+- kliknij link na stronie a przeglądarka przejdzie do nowej strony
+- kliknij przeglądarkowe wstecz aby cofnąć się do poprzedniej strony.
+
+Router odwzorowuje ścieżki URL paths do widoków zamiast stron. Gdy użytkownik wykonuje działanie, takie jak kliknięcie łącza, które może załadować nową stronę w przeglądarce, router przechwytuje zachowanie przeglądarki i wyświetla lub ukrywa hierarchie widoku.
+
+Jeśli router stwierdzi, że bieżący stan aplikacji wymaga określonej funkcjonalności, a moduł, który ją definiuje, nie został załadowany, router może wczytać moduł na żądanie (lazy demand).
+
+Router interpretuje URL zgodnie z regułami nawigacji w widoku aplikacji i stanem danych. Możesz przechodzić do nowych widoków, gdy użytkownik kliknie przycisk lub wybierze z dropboxa albo w odpowiedzi na inny bodziec z dowolnego źródła. Router rejestruje aktywność w historii przeglądarki, więc przyciski wstecz i do przodu również działają.
+
+Aby zdefiniować reguły nawigacji, łączysz ścieżki nawigacji ze swoimi komponentami. Ścieżka używa składni podobnej do adresu URL, która integruje dane programu, w bardzo podobny sposób, jak składnia szablonu integruje widoki z danymi programu. 
+Następnie można zastosować logikę programu, aby wybrać widoki do pokazania lub ukrycia, w odpowiedzi na dane wprowadzone przez użytkownika lub własne reguły dostępu.
+
+![Drag Racing](https://angular.io/generated/images/guide/architecture/overview2.png) 
