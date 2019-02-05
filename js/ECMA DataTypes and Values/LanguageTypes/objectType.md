@@ -22,7 +22,26 @@ Wszystkie obiekty są logicznymi kolekcjami właściwości, ale istnieje wiele f
 Obiekty zwykłe są najczęstszą formą obiektów i mają domyślną semantykę obiektów.
 
 ```js
-  var identifier = {
-        key: value              
-      }
+var identifier = {
+      key: value              
+    }
+```
+
+
+
+```js
+var a = {
+    cc: 1
+};
+
+Object.defineProperty(a, 'cc', {
+    value: 2,
+    writable: false
+})
+
+Object.getOwnPropertyDescriptor(a, 'cc');
+
+a.cc = 20;
+
+a; // { cc: 2 }
 ```
