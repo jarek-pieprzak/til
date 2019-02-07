@@ -26,6 +26,7 @@ essential internal methods używane w tej specyfikacji, mają zastosowanie do ws
 Każdy obiekt musi mieć algorytmy dla wszystkich istotnych wewnętrznych metod. Jednak wszystkie obiekty nie muszą używać tych samych 
 algorytmów dla tych metod.
 
+
 | Internal Method | Signature	| Description |
 |---------------- | --------- | ----------- |
 | [[GetPrototypeOf]] | ( ) → Object / Null	| Określ obiekt, który zapewnia odziedziczone właściwości dla tego obiektu. Wartość pusta wskazuje, że nie ma żadnych dziedziczonych właściwości. |
@@ -39,3 +40,5 @@ algorytmów dla tych metod.
 | [[Set]]	| (propertyKey, value, Receiver) → Boolean	|  |
 | [[Delete]] | (propertyKey) → Boolean |  |
 | [[OwnPropertyKeys]] |	( ) → List of propertyKey |  |
+
+
