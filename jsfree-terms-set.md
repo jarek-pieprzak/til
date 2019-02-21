@@ -1,4 +1,5 @@
-### temporal dead zone - where you cannot access variable before it is defined
+### - temporal dead zone -
+where you cannot access variable before it is defined
 
 ```js
   var pizza = 'Deep Dish 🍕🍕🍕';
