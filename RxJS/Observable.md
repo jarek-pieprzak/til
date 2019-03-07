@@ -35,4 +35,44 @@ RxJS wprowadził nowy rodzaj do Push systemu w JavaScripcie - Observable. Observ
   - Promisy, mogą zwracać (ale nie muszą) pojedynczą wartość.
   - Observables są lazily evaluated computation, które mogą synchronicznie lub niesynchronicznie zwracac od zera do (potencjalnie) nieskonczonej ilosci wartości, od czasu w którym zastały wywałoane
  
+ ### Observable jako generalizacja funkcji
+ W przeciwieństwie do popularnych twierdzeń, Observables nie są jak EventEmittery ani jak Promisy dla wielu wartości. Observables mogą zachowywać się jak Event Emmitery w niektórych przypadkach, mianowicie kiedy są rozgłaszane przy użyciu RxJS Subjects, ale zazwyczaj nie zachowują się jak Event Emittery.
+
+ ### Anatomia Observable
+ Observables są tworzone przy użyciu `new Observable` lub creation operator, są obserwowane przez Observer, są subskrybowane za pomocą Obserwatora, wykonywane w celu dostarczania next / error / complete Obserwatorowi, a ich wykonanie może zostać usunięte.
+
+Rdzeń Observable składa się z: 
+  - tworzenia Observabla
+  - subskrypcji do Observabla
+  - execucji Observabla
+  - utylizacji/unsubscribe Observabla
+  
+#### Tworzenie Observables
+Konstruktor Observable przyjmuje jeden argument, funkcję `subscription`.
+```js
+  const obs = new Observable( function subscribe(subscriber) {
+                subscriber.next('helllo')
+              } )
+```
+
+#### Subcribing do Observables
+Observable `obs` może być zasubskrybowana w ten sposób:
+```js
+  obs.subscribe(x => console.log(x));
+```
+To nie przypadek że `obs.subscribe` oraz `subscribe` w `new Observable(function subscribe(subscriber) {...})` mają tą samą nazwę. W bibliotece, są różne, ale dla celów praktycznych można uważać te koncepty jako takie same.
+
+#### Executing Observables
+Kod wewnątrz `new Observable(function subscribe(subscriber) {...})` reprezentuje "Observable execution", lazy computation, która ma miejsce tylko dla każdego Observera, który subskrybuje.
+Egzekucja produkuje wiele wartości w czasie, zarówno synchronicznie jak i niesynchronicznie.
+
+Są trzy typy wartości które egzekucja Observable może dostarczyć:
+  - notification 'Next' - wysyła wartości - Number, String, Object itd.
+  - notification 'Error' - wysyła JS Error lub wyjątek.
+  - notification 'Complete' - nie wysyła wartości.
+  
+
+
+ 
+ 
  
